@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>失業保険（基本手当）シミュレーター | もらえる金額と日数を概算</title>
+<meta name="description" content="離職前の給与・年齢・勤続年数を入れるだけで、失業保険（雇用保険の基本手当）の日額・給付日数・受給総額の目安をまとめて計算。自己都合・会社都合の違いにも対応した無料ツールです。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://webtools-labs.com/shitsugyo-hoken-keisan/">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2370765779014113" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NKK5TXCQEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NKK5TXCQEK');
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f766e'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif'%3E%EF%BF%A5%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="webtools-labs">
+<meta property="og:title" content="失業保険（基本手当）シミュレーター | もらえる金額と日数を概算">
+<meta property="og:description" content="離職前の給与・年齢・勤続年数から、失業保険の日額・給付日数・受給総額の目安をまとめて計算できます。">
+<meta property="og:url" content="https://webtools-labs.com/shitsugyo-hoken-keisan/">
+<meta property="og:image" content="https://webtools-labs.com/shitsugyo-hoken-keisan/og-image.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="失業保険（基本手当）シミュレーター">
+<meta name="twitter:description" content="失業保険でもらえる金額と日数を概算できる無料ツール。">
+<meta name="twitter:image" content="https://webtools-labs.com/shitsugyo-hoken-keisan/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "失業保険（基本手当）シミュレーター",
+  "url": "https://webtools-labs.com/shitsugyo-hoken-keisan/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "離職前の給与・年齢・勤続年数・離職理由から、失業保険（雇用保険の基本手当）の日額・給付日数・受給総額の目安をまとめて計算できる無料ツール。",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+  "inLanguage": "ja"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "自己都合退職と会社都合退職で何が違いますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "会社都合（倒産・解雇など、特定受給資格者に該当する場合）は、自己都合退職より給付日数が長く設定されており、給付制限期間（待期期間後にすぐ受給できない期間）もありません。自己都合退職の場合は、2025年4月以降、原則1か月の給付制限期間があります（過去5年以内に自己都合退職が複数回ある場合は2か月）。" }
+    },
+    {
+      "@type": "Question",
+      "name": "失業保険はいつからもらえますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "離職後、ハローワークで求職の申し込みをしてから7日間の待期期間があり、その後、会社都合の場合はすぐに、自己都合の場合は原則1か月の給付制限期間を経てから支給が始まります。実際に振り込まれるまでには申請から1か月以上かかるのが一般的です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "基本手当日額はどうやって決まりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "離職前6か月の賃金合計を180で割った「賃金日額」に、賃金水準に応じた給付率（おおむね50%〜80%、賃金が低いほど給付率が高くなる仕組み）をかけて計算します。賃金日額には年齢区分ごとの上限額もあり、上限を超える部分は反映されません。" }
+    },
+    {
+      "@type": "Question",
+      "name": "受給するための条件はありますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "原則として、離職日以前2年間に雇用保険の被保険者期間が通算12か月以上必要です（会社都合等の場合は離職日以前1年間に通算6か月以上）。また、ハローワークで求職の申し込みをし、働く意思と能力があるにもかかわらず職業に就けない状態であることが必要です。" }
+    }
+  ]
+}
+</script>
+<style>
+:root {
+  --bg: #ffffff;
+  --surface-2: #f7f7f7;
+  --ink: #1a1a1a;
+  --muted: #767676;
+  --line: #e3e3e3;
+  --accent: #0f766e;
+  --best-bg: #f0f8f6;
+  --warn-bg: #fff7ed;
+  --warn-ink: #9a5b00;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 720px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+header.masthead { margin-bottom: 1.5rem; }
+h1 {
+  font-weight: 700;
+  font-size: clamp(1.4rem, 4.5vw, 1.7rem);
+  margin: 0 0 0.7rem;
+  letter-spacing: 0.01em;
+}
+p.lede { color: var(--muted); margin: 0; max-width: 60ch; font-size: 0.95rem; }
+.updated-note { display: block; margin-top: 0.9rem; font-size: 0.78rem; color: var(--muted); }
+
+.notice-box {
+  background: var(--warn-bg); color: var(--warn-ink); border-radius: 8px;
+  padding: 0.9rem 1.1rem; font-size: 0.85rem; margin-bottom: 2rem;
+}
+
+section { margin-bottom: 2.5rem; }
+h2 { font-size: 1.05rem; font-weight: 700; margin: 0 0 1rem; }
+
+.field-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; }
+.field { flex: 1; min-width: 160px; }
+.field label { display: block; font-size: 0.83rem; color: var(--muted); margin-bottom: 0.35rem; }
+.field input[type="number"], .field select {
+  width: 100%; font-variant-numeric: tabular-nums; font-size: 1.05rem; font-family: inherit;
+  padding: 0.55rem 0.7rem; border: 1px solid var(--line); border-radius: 6px;
+  background: var(--bg); color: var(--ink);
+}
+.field input:focus, .field select:focus { outline: none; border-color: var(--accent); }
+.field-hint { font-size: 0.76rem; color: var(--muted); margin-top: 0.3rem; }
+
+.summary-cards { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+.summary-card {
+  flex: 1; min-width: 180px; background: var(--best-bg); border-radius: 10px;
+  padding: 1rem 1.2rem;
+}
+.summary-card .label { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.3rem; }
+.summary-card .value { font-size: 1.4rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.summary-card .sub { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
+
+table.compare { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+table.compare th, table.compare td {
+  padding: 0.55rem 0.5rem; text-align: right; border-bottom: 1px solid var(--line); vertical-align: top;
+}
+table.compare th:first-child, table.compare td:first-child { text-align: left; }
+table.compare thead th { color: var(--muted); font-weight: 500; font-size: 0.78rem; }
+table.compare td.num { font-variant-numeric: tabular-nums; }
+tr.total td { font-weight: 700; }
+tr.total { background: var(--best-bg); }
+
+.ref-table { overflow-x: auto; }
+.ref-table table { width: 100%; border-collapse: collapse; font-size: 0.86rem; min-width: 460px; }
+.ref-table th, .ref-table td { padding: 0.5rem 0.5rem; border-bottom: 1px solid var(--line); text-align: left; }
+.ref-table td.num { font-variant-numeric: tabular-nums; text-align: right; }
+
+.disclaimer { font-size: 0.78rem; color: var(--muted); margin-top: 1rem; }
+
+.share-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.1rem; }
+.share-btn {
+  display: inline-flex; align-items: center; padding: 0.5rem 1rem; border-radius: 999px;
+  color: #fff; text-decoration: none; font-size: 0.82rem; font-weight: 700;
+}
+.share-btn:hover { opacity: 0.85; }
+.share-x { background: #000; }
+.share-line { background: #06c755; }
+.share-fb { background: #1877f2; }
+.share-hatena { background: #00a4de; }
+
+.ad-slot { margin: 2.5rem 0; text-align: center; min-height: 100px; }
+
+.pr-box {
+  border: 1px solid var(--line); border-radius: 10px; padding: 1.1rem 1.2rem;
+  margin: 2.5rem 0;
+}
+.pr-box .pr-label {
+  display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em;
+  color: var(--muted); border: 1px solid var(--line); border-radius: 4px;
+  padding: 0.05rem 0.4rem; margin-bottom: 0.7rem;
+}
+.pr-box p.pr-lede { color: var(--ink); font-size: 0.9rem; margin: 0 0 0.9rem; max-width: none; }
+.pr-box .pr-banner { text-align: center; }
+
+.contact-box textarea {
+  width: 100%; min-height: 6rem; font-family: inherit; font-size: 0.92rem;
+  padding: 0.7rem; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink);
+  resize: vertical; margin-bottom: 0.6rem;
+}
+.contact-box input[type="email"] {
+  width: 100%; font-family: inherit; font-size: 0.92rem;
+  padding: 0.6rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink);
+  margin-bottom: 0.6rem;
+}
+.contact-box textarea:focus, .contact-box input:focus { outline: none; border-color: var(--accent); }
+.contact-box button {
+  font-family: inherit; font-weight: 700; font-size: 0.9rem; padding: 0.6rem 1.4rem;
+  border: none; border-radius: 6px; background: var(--accent); color: #fff; cursor: pointer;
+}
+.contact-box button:disabled { opacity: 0.5; cursor: not-allowed; }
+.contact-status { font-size: 0.85rem; margin-top: 0.6rem; }
+.contact-status.ok { color: var(--accent); }
+.contact-status.err { color: #b91c1c; }
+
+footer.site-footer {
+  margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line);
+  font-size: 0.78rem; color: var(--muted);
+}
+footer.site-footer p { margin: 0 0 0.5rem; }
+footer.site-footer a { color: var(--accent); }
+
+.faq-item { border-bottom: 1px solid var(--line); padding: 0.9rem 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-item summary {
+  cursor: pointer; font-weight: 700; font-size: 0.92rem; list-style: none;
+  position: relative; padding-right: 1.6rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+'; position: absolute; right: 0; top: 0; color: var(--accent); font-weight: 700; font-size: 1.1rem;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-item p { margin: 0.7rem 0 0; color: var(--muted); font-size: 0.88rem; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <h1>失業保険（基本手当）シミュレーター</h1>
+    <p class="lede">離職前の給与・年齢・勤続年数を入れるだけで、失業保険（雇用保険の基本手当）の日額・給付日数・受給総額の目安をまとめて計算します。</p>
+    <span class="updated-note">給付率・給付日数の基準 最終確認日: 2026年9月8日</span>
+  </header>
+
+  <div class="notice-box">
+    ⚠️ このツールは一般的な計算方法にもとづく簡易概算です。給付率・給付日数・上限額は年齢区分や年度改定によって細かく変わり、実際の受給資格・金額はハローワークでの手続きを経て決定されます。正確な内容は必ずハローワークでご確認ください。
+  </div>
+
+  <section>
+    <h2>もらえる金額を計算</h2>
+    <div class="field-row">
+      <div class="field">
+        <label for="wage6mo">離職前6か月の給与総額（円）</label>
+        <input type="number" id="wage6mo" min="0" step="10000" value="1500000">
+        <div class="field-hint">賞与を除いた、直近6か月分の給与総支給額の合計</div>
+      </div>
+      <div class="field">
+        <label for="age">離職時の年齢</label>
+        <input type="number" id="age" min="15" max="80" step="1" value="30">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="years">雇用保険に加入していた期間（年）</label>
+        <input type="number" id="years" min="0" step="1" value="3">
+      </div>
+      <div class="field">
+        <label for="reason">離職理由</label>
+        <select id="reason">
+          <option value="voluntary">自己都合退職</option>
+          <option value="involuntary">会社都合・倒産解雇等</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="summary-cards" id="summaryCards"></div>
+
+    <div style="overflow-x:auto">
+      <table class="compare">
+        <thead>
+          <tr><th>項目</th><th class="num">内容</th></tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+      </table>
+    </div>
+    <p class="disclaimer">賃金日額は「離職前6か月の給与総額 ÷ 180」で計算し、給付率は賃金水準に応じて50%〜80%の範囲で概算しています（年齢区分ごとの上限額の詳細な反映は省略した簡易版です）。給付日数は勤続年数・離職理由・年齢にもとづく一般的な目安です。給付制限期間（自己都合の場合の1か月程度の待期）は金額計算に含めていません。</p>
+    <div class="share-row" id="shareRow">
+      <a class="share-btn share-x" id="shareX" href="#" target="_blank" rel="noopener">𝕏でシェア</a>
+      <a class="share-btn share-line" id="shareLine" href="#" target="_blank" rel="noopener">LINEで送る</a>
+      <a class="share-btn share-fb" id="shareFb" href="#" target="_blank" rel="noopener">Facebookでシェア</a>
+      <a class="share-btn share-hatena" id="shareHatena" href="#" target="_blank" rel="noopener">はてブする</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>給付日数の早見表（勤続年数別）</h2>
+    <div class="ref-table">
+      <table>
+        <thead><tr><th>勤続年数</th><th class="num">自己都合退職</th><th class="num">会社都合等（35〜44歳の例）</th></tr></thead>
+        <tbody>
+          <tr><td>1年未満</td><td class="num">対象外</td><td class="num">90日</td></tr>
+          <tr><td>1年以上5年未満</td><td class="num">90日</td><td class="num">150日</td></tr>
+          <tr><td>5年以上10年未満</td><td class="num">90日</td><td class="num">180日</td></tr>
+          <tr><td>10年以上20年未満</td><td class="num">120日</td><td class="num">240日</td></tr>
+          <tr><td>20年以上</td><td class="num">150日</td><td class="num">270日</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="disclaimer">会社都合等（特定受給資格者）の給付日数は年齢によっても変わります。上表は35〜44歳の場合の目安です。</p>
+  </section>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-2370765779014113"
+      data-ad-slot="3021985784"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="pr-box">
+    <span class="pr-label">PR</span>
+    <p class="pr-lede">失業保険の受給中は収入が不安定になりがちです。日々の支払いの還元率を見直しておくと、家計の負担を少し減らせます。</p>
+    <div class="pr-banner">
+      <script type='text/javascript' src='https://ad-verification.a8.net/ad/js/brandsafe.js'></script>
+      <div id='div_admane_async_1734_658_2972'>
+      <script type='text/javascript'>
+      <!--
+      brandsafe_js_async('//ad-verification.a8.net/ad', '_site=1734&_article=658&_link=2972&_image=3219&_ns=1&sad=s00000015110002', '260907514413', '4BC5IY+6TW2E2+38L8+BXYE9');
+      //-->
+      </script>
+      </div>
+      <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4BC5IY+6TW2E2+38L8+BXYE9" alt="">
+    </div>
+  </div>
+
+  <section>
+    <h2>よくある質問</h2>
+    <details class="faq-item">
+      <summary>自己都合退職と会社都合退職で何が違いますか？</summary>
+      <p>会社都合（倒産・解雇など、特定受給資格者に該当する場合）は、自己都合退職より給付日数が長く設定されており、給付制限期間（待期期間後にすぐ受給できない期間）もありません。自己都合退職の場合は、2025年4月以降、原則1か月の給付制限期間があります（過去5年以内に自己都合退職が複数回ある場合は2か月）。</p>
+    </details>
+    <details class="faq-item">
+      <summary>失業保険はいつからもらえますか？</summary>
+      <p>離職後、ハローワークで求職の申し込みをしてから7日間の待期期間があり、その後、会社都合の場合はすぐに、自己都合の場合は原則1か月の給付制限期間を経てから支給が始まります。実際に振り込まれるまでには申請から1か月以上かかるのが一般的です。</p>
+    </details>
+    <details class="faq-item">
+      <summary>基本手当日額はどうやって決まりますか？</summary>
+      <p>離職前6か月の賃金合計を180で割った「賃金日額」に、賃金水準に応じた給付率（おおむね50%〜80%、賃金が低いほど給付率が高くなる仕組み）をかけて計算します。賃金日額には年齢区分ごとの上限額もあり、上限を超える部分は反映されません。</p>
+    </details>
+    <details class="faq-item">
+      <summary>受給するための条件はありますか？</summary>
+      <p>原則として、離職日以前2年間に雇用保険の被保険者期間が通算12か月以上必要です（会社都合等の場合は離職日以前1年間に通算6か月以上）。また、ハローワークで求職の申し込みをし、働く意思と能力があるにもかかわらず職業に就けない状態であることが必要です。</p>
+    </details>
+  </section>
+
+  <section class="contact-box">
+    <h2>ご意見・追加してほしい機能</h2>
+    <p class="lede" style="margin-bottom:0.9rem;">気づいたことや、あったら便利な機能があれば教えてください。</p>
+    <form id="contactForm">
+      <input type="email" id="contactEmail" placeholder="返信が必要な場合はメールアドレス（任意）">
+      <textarea id="contactMessage" placeholder="ご意見・ご要望をどうぞ" required></textarea>
+      <button type="submit" id="contactSubmit">送信する</button>
+      <p class="contact-status" id="contactStatus"></p>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <p>本ツールの計算結果は一般的な前提にもとづく概算であり、正確性を保証するものではありません。実際の受給資格・金額・給付日数は、ハローワークでの手続きを経て個別に決定されます。正確な内容は必ずお近くのハローワークでご確認ください。</p>
+    <p>あわせて使える：
+      <a href="https://webtools-labs.com/tedori-keisan/">手取り計算ツール</a> ／
+      <a href="https://webtools-labs.com/taishoku-yukyu-keisan/">退職時の有給消化シミュレーター</a> ／
+      <a href="https://webtools-labs.com/taishokukin-zei-keisan/">退職金の税金計算ツール</a> ／
+      <a href="https://webtools-labs.com/zangyodai-keisan/">残業代計算ツール</a>
+    </p>
+    <p>当サイトは広告を掲載する場合があります。</p>
+    <p><a href="https://webtools-labs.com/about/">運営者情報</a> ／ <a href="https://webtools-labs.com/privacy/">プライバシーポリシー</a></p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  function yen(n) { return Math.round(n).toLocaleString('ja-JP') + '円'; }
+
+  function wageDaily(totalWage6mo) {
+    return totalWage6mo / 180;
+  }
+
+  function benefitDaily(wd) {
+    var capped = Math.min(wd, 16980);
+    if (wd < 2746) return wd;
+    if (capped < 5110) return capped * 0.8;
+    if (capped <= 12580) {
+      var rate = 0.8 - 0.3 * (capped - 5110) / (12580 - 5110);
+      return capped * rate;
+    }
+    return capped * 0.5;
+  }
+
+  function grantDays(reason, age, years) {
+    if (reason === 'voluntary') {
+      if (years < 1) return 0;
+      if (years < 10) return 90;
+      if (years < 20) return 120;
+      return 150;
+    }
+    var table;
+    if (age < 30) table = [90, 90, 120, 180, 180];
+    else if (age < 35) table = [90, 120, 180, 210, 240];
+    else if (age < 45) table = [90, 150, 180, 240, 270];
+    else if (age < 60) table = [90, 180, 240, 270, 330];
+    else table = [90, 150, 180, 210, 240];
+    if (years < 1) return table[0];
+    if (years < 5) return table[1];
+    if (years < 10) return table[2];
+    if (years < 20) return table[3];
+    return table[4];
+  }
+
+  function calc(wage6mo, age, years, reason) {
+    var wd = wageDaily(wage6mo);
+    var bd = benefitDaily(wd);
+    var days = grantDays(reason, age, years);
+    var total = bd * days;
+    return { wd: wd, bd: bd, days: days, total: total };
+  }
+
+  var wage6moInput = document.getElementById('wage6mo');
+  var ageInput = document.getElementById('age');
+  var yearsInput = document.getElementById('years');
+  var reasonInput = document.getElementById('reason');
+  var summaryCards = document.getElementById('summaryCards');
+  var resultBody = document.getElementById('resultBody');
+  var shareX = document.getElementById('shareX');
+  var shareLine = document.getElementById('shareLine');
+  var shareFb = document.getElementById('shareFb');
+  var shareHatena = document.getElementById('shareHatena');
+
+  function setShareLinks(text, url) {
+    shareX.href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url);
+    shareLine.href = 'https://line.me/R/msg/text/?' + encodeURIComponent(text + '\n' + url);
+    shareFb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&quote=' + encodeURIComponent(text);
+    shareHatena.href = 'https://b.hatena.ne.jp/entry/panel/?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(text);
+  }
+
+  function render() {
+    var wage6mo = Math.max(0, Number(wage6moInput.value) || 0);
+    var age = Math.max(15, Number(ageInput.value) || 15);
+    var years = Math.max(0, Number(yearsInput.value) || 0);
+    var reason = reasonInput.value;
+    var r = calc(wage6mo, age, years, reason);
+
+    summaryCards.innerHTML =
+      '<div class="summary-card"><div class="label">基本手当日額</div><div class="value">' + yen(r.bd) + '</div><div class="sub">1日あたりの受給額</div></div>' +
+      '<div class="summary-card"><div class="label">給付日数</div><div class="value">' + r.days + '日</div><div class="sub">' + (reason === 'voluntary' ? '自己都合退職' : '会社都合・倒産解雇等') + '</div></div>' +
+      '<div class="summary-card"><div class="label">受給総額の目安</div><div class="value">' + yen(r.total) + '</div><div class="sub">基本手当日額 × 給付日数</div></div>';
+
+    var noteHtml = '';
+    if (reason === 'voluntary' && years < 1) {
+      noteHtml = '<tr><td colspan="2" style="color:var(--warn-ink);font-size:0.82rem;">※雇用保険の加入期間が1年未満のため、自己都合退職では受給要件を満たさない可能性があります</td></tr>';
+    }
+
+    resultBody.innerHTML =
+      '<tr><td>賃金日額</td><td class="num">' + yen(r.wd) + '</td></tr>' +
+      '<tr><td>給付率（概算）</td><td class="num">' + (r.wd > 0 ? Math.round(r.bd / Math.min(r.wd, 16980) * 100) : 0) + '%</td></tr>' +
+      '<tr><td>基本手当日額</td><td class="num">' + yen(r.bd) + '</td></tr>' +
+      '<tr><td>給付日数</td><td class="num">' + r.days + '日</td></tr>' +
+      noteHtml +
+      '<tr class="total"><td>受給総額の目安</td><td class="num">' + yen(r.total) + '</td></tr>';
+
+    var shareText = '勤続' + years + '年・' + (reason === 'voluntary' ? '自己都合' : '会社都合') + 'で退職した場合の失業保険を計算したら\n' +
+      '受給総額の目安は ' + yen(r.total) + ' でした\n\n' +
+      '失業保険（基本手当）シミュレーター';
+    setShareLinks(shareText, 'https://webtools-labs.com/shitsugyo-hoken-keisan/');
+  }
+
+  wage6moInput.addEventListener('input', render);
+  ageInput.addEventListener('input', render);
+  yearsInput.addEventListener('input', render);
+  reasonInput.addEventListener('change', render);
+
+  render();
+
+  var WEB3FORMS_ACCESS_KEY = '4551c9fd-4327-4bd4-97e0-8b93d85fd077';
+  var contactForm = document.getElementById('contactForm');
+  var contactStatus = document.getElementById('contactStatus');
+  var contactSubmit = document.getElementById('contactSubmit');
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    contactSubmit.disabled = true;
+    contactStatus.textContent = '送信中...';
+    contactStatus.className = 'contact-status';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: '失業保険シミュレーターへのお問い合わせ',
+        email: document.getElementById('contactEmail').value || 'noreply@example.com',
+        message: document.getElementById('contactMessage').value
+      })
+    }).then(function (res) { return res.json(); }).then(function (data) {
+      contactSubmit.disabled = false;
+      if (data.success) {
+        contactStatus.textContent = '送信しました。ありがとうございます！';
+        contactStatus.className = 'contact-status ok';
+        contactForm.reset();
+      } else {
+        contactStatus.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+        contactStatus.className = 'contact-status err';
+      }
+    }).catch(function () {
+      contactSubmit.disabled = false;
+      contactStatus.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+      contactStatus.className = 'contact-status err';
+    });
+  });
+})();
+</script>
+</body>
+</html>

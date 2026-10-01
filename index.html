@@ -92,6 +92,16 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://webtools-labs.com/" },
+    { "@type": "ListItem", "position": 2, "name": "失業保険（基本手当）シミュレーター" }
+  ]
+}
+</script>
 <style>
 :root {
   --bg: #ffffff;
@@ -233,10 +243,14 @@ footer.site-footer a { color: var(--accent); }
 }
 .faq-item[open] summary::after { content: '−'; }
 .faq-item p { margin: 0.7rem 0 0; color: var(--muted); font-size: 0.88rem; }
+.breadcrumb { font-size: 0.78rem; color: var(--muted); margin-bottom: 1.1rem; }
+.breadcrumb a { color: var(--accent); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
 <div class="page">
+  <nav class="breadcrumb" aria-label="パンくずリスト"><a href="https://webtools-labs.com/">ホーム</a> / 失業保険（基本手当）シミュレーター</nav>
   <header class="masthead">
     <h1>失業保険（基本手当）シミュレーター</h1>
     <p class="lede">離職前の給与・年齢・勤続年数を入れるだけで、失業保険（雇用保険の基本手当）の日額・給付日数・受給総額の目安をまとめて計算します。</p>

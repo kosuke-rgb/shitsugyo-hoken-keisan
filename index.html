@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>失業保険（基本手当）シミュレーター | もらえる金額と日数を概算</title>
-<meta name="description" content="離職前の給与・年齢・勤続年数を入れるだけで、失業保険（雇用保険の基本手当）の日額・給付日数・受給総額の目安をまとめて計算。自己都合・会社都合の違いにも対応した無料ツールです。">
+<meta name="description" content="離職前の給与・年齢・勤続年数を入れるだけで、失業保険（雇用保険の基本手当）の日額・給付日数・受給総額の目安をまとめて計算。自己都合・会社都合の違いにも対応した無料ツールです。失業保険の税金・扶養の扱いも解説しています。">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://webtools-labs.com/shitsugyo-hoken-keisan/">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2370765779014113" crossorigin="anonymous"></script>
@@ -88,6 +88,16 @@
       "@type": "Question",
       "name": "受給期間中に再就職が決まったらどうなりますか？",
       "acceptedAnswer": { "@type": "Answer", "text": "基本手当の支給日数を一定以上残して早期に再就職が決まった場合、「再就職手当」という別の一時金を受け取れる可能性があります。残っていた給付日数が多いほど支給率が高くなる仕組みで、早く仕事を見つけるほど有利になるよう設計されています。" }
+    },
+    {
+      "@type": "Question",
+      "name": "失業保険に税金はかかりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "かかりません。失業保険（雇用保険の基本手当）は非課税なので、所得税も住民税もかからず、確定申告をするときも収入に含めません。また、配偶者控除や扶養控除を判定するときの収入にも数えません。" }
+    },
+    {
+      "@type": "Question",
+      "name": "失業保険をもらっている間、配偶者や親の健康保険の扶養に入れますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "基本手当日額によって変わります。健康保険の扶養では失業保険も収入として数え、日額が3,612円以上（60歳以上や障害のある人は5,000円以上）だと、受給している間は扶養に入れません。日額がこれより低い場合や、受給が始まる前の待期期間・給付制限期間中は扶養に入れることがあります。扱いは健康保険組合によって違うことがあるので、家族の勤務先で確認してください。" }
     }
   ]
 }
@@ -262,7 +272,7 @@ footer.site-footer a { color: var(--accent); }
   <header class="masthead">
     <h1>失業保険（基本手当）シミュレーター</h1>
     <p class="lede">離職前の給与・年齢・勤続年数を入れるだけで、失業保険（雇用保険の基本手当）の日額・給付日数・受給総額の目安をまとめて計算します。</p>
-    <span class="updated-note">給付率・給付日数の基準 最終確認日: 2026年9月8日</span>
+    <span class="updated-note">給付率・給付日数の基準 最終確認日: 2026年11月10日</span>
     <p class="ad-disclosure" style="font-size:0.75rem;opacity:0.7;margin:0.5rem 0 0;">※当サイトはアフィリエイト広告（PR）を利用しています。</p>
   </header>
 
@@ -406,6 +416,27 @@ footer.site-footer a { color: var(--accent); }
     <p class="disclaimer">厚生労働省の制度にもとづく一般的な説明です。自分が対象になるかは、ハローワークで確認してください。</p>
   </section>
 
+  <section id="zei-fuyou">
+    <h2>失業保険に税金はかかる？家族の扶養には入れる？</h2>
+    <p>失業保険（基本手当）は、税金と社会保険で扱いが違います。受け取る前に確認しておきましょう。</p>
+    <div class="ref-table" style="overflow-x:auto">
+      <table>
+        <thead><tr><th>項目</th><th>失業保険の扱い</th></tr></thead>
+        <tbody>
+          <tr><td>所得税・住民税</td><td><strong>かかりません（非課税）。</strong>確定申告にも含めません。</td></tr>
+          <tr><td>配偶者控除・扶養控除（税金の扶養）</td><td>非課税なので、収入に<strong>数えません</strong>。年の途中まで働いた給与だけで判定します。</td></tr>
+          <tr><td>健康保険の扶養（社会保険）</td><td>収入に<strong>数えます</strong>。基本手当日額が3,612円以上（60歳以上などは5,000円以上）だと、受給中は扶養に入れません。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul style="padding-left:1.3rem;">
+      <li><strong>健康保険の扶養は「日額」で見られます。</strong>年収130万円未満（60歳以上などは180万円未満）を360日で割った額が目安で、これを超える日額を受け取っている間は、配偶者や親の扶養に入れず、国民健康保険などに加入します。待期期間や給付制限期間中は扶養に入れる場合があるので、家族の勤務先の健康保険で確認してください。</li>
+      <li><strong>退職した年の給与は、年末調整されないことがあります。</strong>年の途中で退職して年内に再就職しない場合は、翌年に確定申告をすると給与から引かれすぎた所得税が戻ることがあります。このとき、失業保険の金額は書かなくてかまいません。</li>
+    </ul>
+    <p class="disclaimer">退職後の健康保険の選び方は<a href="https://webtools-labs.com/taishokugo-hoken-hikaku-keisan/">退職後の健康保険 比較シミュレーター</a>、退職金の税金は<a href="https://webtools-labs.com/taishokukin-zei-keisan/">退職金の税金計算ツール</a>で確認できます。</p>
+  </section>
+
+
   <div class="ad-slot">
     <ins class="adsbygoogle"
       style="display:block"
@@ -442,6 +473,14 @@ footer.site-footer a { color: var(--accent); }
     <details class="faq-item">
       <summary>受給期間中に再就職が決まったらどうなりますか？</summary>
       <p>基本手当の支給日数を一定以上残して早期に再就職が決まった場合、「再就職手当」という別の一時金を受け取れる可能性があります。残っていた給付日数が多いほど支給率が高くなる仕組みで、早く仕事を見つけるほど有利になるよう設計されています。</p>
+    </details>
+    <details class="faq-item">
+      <summary>失業保険に税金はかかりますか？</summary>
+      <p>かかりません。失業保険（雇用保険の基本手当）は非課税なので、所得税も住民税もかからず、確定申告をするときも収入に含めません。また、配偶者控除や扶養控除を判定するときの収入にも数えません。</p>
+    </details>
+    <details class="faq-item">
+      <summary>失業保険をもらっている間、配偶者や親の健康保険の扶養に入れますか？</summary>
+      <p>基本手当日額によって変わります。健康保険の扶養では失業保険も収入として数え、日額が3,612円以上（60歳以上や障害のある人は5,000円以上）だと、受給している間は扶養に入れません。日額がこれより低い場合や、受給が始まる前の待期期間・給付制限期間中は扶養に入れることがあります。扱いは健康保険組合によって違うことがあるので、家族の勤務先で確認してください。</p>
     </details>
   </section>
 
